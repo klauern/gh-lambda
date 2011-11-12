@@ -10,8 +10,10 @@
   )
 
 (defn gist
-  ([]  GistService.)
+  ([]  (GistService.))
   ([user pass] (-> (GistService.) (.getClient) (.setCredentials user pass))))
+
+
 
 
 
