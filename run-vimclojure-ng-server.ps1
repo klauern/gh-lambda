@@ -1,1 +1,1 @@
-java -cp $(lein classpath) vimclojure.nailgun.NGServer 127.0.0.1
+lein run vimclojure.nailgun.NGServer 127.0.0.1
