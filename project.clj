@@ -9,5 +9,6 @@
                      [org.clojure/tools.nrepl "0.0.5"]
                      [org.thnetos/cd-client "0.3.1"]
                      [vimclojure/server "2.3.0"]
+                     ;[com.cemerick/pomegranate "0.0.1"]
                      ]
   :repl-init github.repl-init)
