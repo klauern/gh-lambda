@@ -11,9 +11,3 @@
   ([token] (-> (GitHubClient.) (.setOauth2Token token)))
   ([user pass] (-> (GitHubClient.) (.setCredentials user pass))))
 
-(defn set-http-proxy
-  [host port]
-  (do
-    (System/setProperty "http.proxyHost" host)
-    (System/setProperty "http.proxyPort" port)))
-

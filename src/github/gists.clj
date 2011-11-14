@@ -4,12 +4,19 @@
                                          GistChangeStatus
                                          GistRevision)
            (org.eclipse.egit.github.core.service GistService)))
+(require (clojure.i))
+(defn file-content
+  ([content] 
+    (-> (GistFile.) (.setContent content)))
+  ([content gistfile]
+    (-> (.setContent gistfile content))))
 
-(defn create-gist
-  "Create a gist"
-  )
+(defn create
+  "Create gist"
+  [^Gist gist]
+  (.createGist gist))
 
-(defn gist
+(defn gist-svc
   ([]  (GistService.))
   ([user pass] (-> (GistService.) (.getClient) (.setCredentials user pass))))
 
